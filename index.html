@@ -19,10 +19,8 @@
             if (minutes < 10) minutes = '0' + minutes;
             if (seconds < 10) seconds = '0' + seconds;
             
-            // 時刻を表示
-            var ymd = year + '年' + month+1 + '月' + date + '日';
-            console.log(ymd);
-            var timeString = hours + ':' + minutes + ':' + seconds;
+            // 年月日、時刻を表示
+            var timeString = year + '年' + month+1 + '月' + date + '日' + hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerHTML = timeString;
             
             
