@@ -11,7 +11,7 @@
             var minutes = now.getMinutes();
             var seconds = now.getSeconds();
             var year = now.getFullYear();
-            var month = now.getMonth();
+            var month = now.getMonth() + 1;
             var date = now.getDate();
             
             // 1桁の場合は0を付ける
@@ -20,7 +20,7 @@
             if (seconds < 10) seconds = '0' + seconds;
             
             // 年月日、時刻を表示
-            var timeString = year + '年' + month+1 + '月' + date + '日' + hours + ':' + minutes + ':' + seconds;
+            var timeString = year + '年' + month + '月' + date + '日' + hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerHTML = timeString;
             
             
