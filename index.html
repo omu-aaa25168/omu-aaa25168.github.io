@@ -10,6 +10,9 @@
             var hours = now.getHours();
             var minutes = now.getMinutes();
             var seconds = now.getSeconds();
+            var year = now.getFullYear();
+            var month = now.getMonth();
+            var date = now.getDate();
             
             // 1桁の場合は0を付ける
             if (hours < 10) hours = '0' + hours;
@@ -17,8 +20,12 @@
             if (seconds < 10) seconds = '0' + seconds;
             
             // 時刻を表示
+            var ymd = year + '年' + month+1 + '月' + date + '日';
+            console.log(ymd);
             var timeString = hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerHTML = timeString;
+            
+            
         }
         
         // 1秒ごとにupdateClock関数を実行
